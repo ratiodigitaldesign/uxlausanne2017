@@ -1,0 +1,371 @@
+@import "site/mixins";
+
+@font-face {
+    font-family: 'prophetmedium';
+    src: url('prophet-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	 @include responsive-font(2.8vw, 25px, 50px);
+	 
+	 font-family: 'prophetmedium';
+	 font-weight: normal;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+	line-height: 1;
+}
+a {
+	opacity: 1;
+}
+a, a:hover, a:focus {
+	color: black;
+	-webkit-transition: opacity .15s ease-in;
+	transition: opacity .15s ease-in;
+}
+a:hover, a:focus, .secondary {
+	opacity: .5;
+}
+
+.nav {
+	list-style: none;
+}
+#logo {
+	cursor: pointer;
+}
+.grey {
+	color: #808080;
+}
+h2, .f-6, .f-headline {
+	@include responsive-font(6vw, 45px, 90px);
+}
+h1 {
+	font-size: 12vw;
+}
+h1.big {
+	font-size: 24vw;
+}
+
+
+.lausanne {
+	// padding-top: 0.34em;
+}
+.fl p:first-child, .Float p:first-child{
+	margin-top: 0;
+}
+
+.reasons {
+	background: #022C4F;
+	color: #fff;
+}
+@media screen and (max-width: 40em) {
+  .lausanne-small {
+    display: inline-block;
+  }
+  .lausanne-big, .ratio {
+    display: none;
+  }
+}
+@media screen and (min-width: 40em) {
+  .lausanne-small {
+    display: none;
+  }
+  .lausanne-big {
+    display: inline-block;
+  }
+}
+/*
+
+    OVERFLOW
+
+ */
+.overflow-visible {
+  overflow: visible; }
+
+.overflow-hidden {
+  overflow: hidden; }
+
+.overflow-scroll {
+  overflow: scroll; }
+
+.overflow-auto {
+  overflow: auto; }
+
+.overflow-x-visible {
+  overflow-x: visible; }
+
+.overflow-x-hidden {
+  overflow-x: hidden; }
+
+.overflow-x-scroll {
+  overflow-x: scroll; }
+
+.overflow-x-auto {
+  overflow-x: auto; }
+
+.overflow-y-visible {
+  overflow-y: visible; }
+
+.overflow-y-hidden {
+  overflow-y: hidden; }
+
+.overflow-y-scroll {
+  overflow-y: scroll; }
+
+.overflow-y-auto {
+  overflow-y: auto; }
+
+@media screen and (min-width: 30em) {
+  .overflow-visible-ns {
+    overflow: visible; }
+  .overflow-hidden-ns {
+    overflow: hidden; }
+  .overflow-scroll-ns {
+    overflow: scroll; }
+  .overflow-auto-ns {
+    overflow: auto; }
+  .overflow-x-visible-ns {
+    overflow-x: visible; }
+  .overflow-x-hidden-ns {
+    overflow-x: hidden; }
+  .overflow-x-scroll-ns {
+    overflow-x: scroll; }
+  .overflow-x-auto-ns {
+    overflow-x: auto; }
+  .overflow-y-visible-ns {
+    overflow-y: visible; }
+  .overflow-y-hidden-ns {
+    overflow-y: hidden; }
+  .overflow-y-scroll-ns {
+    overflow-y: scroll; }
+  .overflow-y-auto-ns {
+    overflow-y: auto; } }
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .overflow-visible-m {
+    overflow: visible; }
+  .overflow-hidden-m {
+    overflow: hidden; }
+  .overflow-scroll-m {
+    overflow: scroll; }
+  .overflow-auto-m {
+    overflow: auto; }
+  .overflow-x-visible-m {
+    overflow-x: visible; }
+  .overflow-x-hidden-m {
+    overflow-x: hidden; }
+  .overflow-x-scroll-m {
+    overflow-x: scroll; }
+  .overflow-x-auto-m {
+    overflow-x: auto; }
+  .overflow-y-visible-m {
+    overflow-y: visible; }
+  .overflow-y-hidden-m {
+    overflow-y: hidden; }
+  .overflow-y-scroll-m {
+    overflow-y: scroll; }
+  .overflow-y-auto-m {
+    overflow-y: auto; } }
+
+@media screen and (min-width: 60em) {
+  .overflow-visible-l {
+    overflow: visible; }
+  .overflow-hidden-l {
+    overflow: hidden; }
+  .overflow-scroll-l {
+    overflow: scroll; }
+  .overflow-auto-l {
+    overflow: auto; }
+  .overflow-x-visible-l {
+    overflow-x: visible; }
+  .overflow-x-hidden-l {
+    overflow-x: hidden; }
+  .overflow-x-scroll-l {
+    overflow-x: scroll; }
+  .overflow-x-auto-l {
+    overflow-x: auto; }
+  .overflow-y-visible-l {
+    overflow-y: visible; }
+  .overflow-y-hidden-l {
+    overflow-y: hidden; }
+  .overflow-y-scroll-l {
+    overflow-y: scroll; }
+  .overflow-y-auto-l {
+    overflow-y: auto; } }
+
+/*
+
+    BACKGROUND POSITION
+
+    Base:
+    bg = background
+
+    Modifiers:
+    -center = center center
+    -top = top center
+    -right = center right
+    -bottom = bottom center
+    -left = center left
+
+    Media Query Extensions:
+      -ns = not-small
+      -m  = medium
+      -l  = large
+
+ */
+.bg-center {
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.bg-top {
+  background-repeat: no-repeat;
+  background-position: top center; }
+
+.bg-right {
+  background-repeat: no-repeat;
+  background-position: center right; }
+
+.bg-bottom {
+  background-repeat: no-repeat;
+  background-position: bottom center; }
+
+.bg-left {
+  background-repeat: no-repeat;
+  background-position: center left; }
+
+@media screen and (min-width: 30em) {
+  .bg-center-ns {
+    background-repeat: no-repeat;
+    background-position: center center; }
+  .bg-top-ns {
+    background-repeat: no-repeat;
+    background-position: top center; }
+  .bg-right-ns {
+    background-repeat: no-repeat;
+    background-position: center right; }
+  .bg-bottom-ns {
+    background-repeat: no-repeat;
+    background-position: bottom center; }
+  .bg-left-ns {
+    background-repeat: no-repeat;
+    background-position: center left; } }
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .bg-center-m {
+    background-repeat: no-repeat;
+    background-position: center center; }
+  .bg-top-m {
+    background-repeat: no-repeat;
+    background-position: top center; }
+  .bg-right-m {
+    background-repeat: no-repeat;
+    background-position: center right; }
+  .bg-bottom-m {
+    background-repeat: no-repeat;
+    background-position: bottom center; }
+  .bg-left-m {
+    background-repeat: no-repeat;
+    background-position: center left; } }
+
+@media screen and (min-width: 60em) {
+  .bg-center-l {
+    background-repeat: no-repeat;
+    background-position: center center; }
+  .bg-top-l {
+    background-repeat: no-repeat;
+    background-position: top center; }
+  .bg-right-l {
+    background-repeat: no-repeat;
+    background-position: center right; }
+  .bg-bottom-l {
+    background-repeat: no-repeat;
+    background-position: bottom center; }
+  .bg-left-l {
+    background-repeat: no-repeat;
+    background-position: center left; } }
+
+
+  /*
+
+     DISPLAY
+
+     Base:
+      d = display
+
+     Modifiers:
+      n     = none
+      b     = block
+      ib    = inline-block
+      it    = inline-table
+      t     = table
+      tc    = table-cell
+      tr    = table-row
+      tcol  = table-column
+      tcolg = table-column-group
+
+     Media Query Extensions:
+       -ns = not-small
+       -m  = medium
+       -l  = large
+
+  */
+  .dn { display: none; }
+  .di { display: inline; }
+  .db { display: block; }
+  .dib { display: inline-block; }
+  .dit { display: inline-table; }
+  .dt { display: table; }
+  .dtc { display: table-cell; }
+  .dt-row { display: table-row; }
+  .dt-row-group { display: table-row-group; }
+  .dt-column { display: table-column; }
+  .dt-column-group { display: table-column-group; }
+  /*
+    This will set table to full width and then
+    all cells will be equal width
+  */
+  .dt--fixed { table-layout: fixed; width: 100%; }
+  @media screen and (min-width: 30em) {
+   .dn-ns { display: none; }
+   .di-ns { display: inline; }
+   .db-ns { display: block; }
+   .dib-ns { display: inline-block; }
+   .dit-ns { display: inline-table; }
+   .dt-ns { display: table; }
+   .dtc-ns { display: table-cell; }
+   .dt-row-ns { display: table-row; }
+   .dt-row-group-ns { display: table-row-group; }
+   .dt-column-ns { display: table-column; }
+   .dt-column-group-ns { display: table-column-group; }
+   .dt--fixed-ns { table-layout: fixed; width: 100%; }
+  }
+  @media screen and (min-width: 30em) and (max-width: 60em) {
+   .dn-m { display: none; }
+   .di-m { display: inline; }
+   .db-m { display: block; }
+   .dib-m { display: inline-block; }
+   .dit-m { display: inline-table; }
+   .dt-m { display: table; }
+   .dtc-m { display: table-cell; }
+   .dt-row-m { display: table-row; }
+   .dt-row-group-m { display: table-row-group; }
+   .dt-column-m { display: table-column; }
+   .dt-column-group-m { display: table-column-group; }
+   .dt--fixed-m { table-layout: fixed; width: 100%; }
+  }
+  @media screen and (min-width: 60em) {
+   .dn-l { display: none; }
+   .di-l { display: inline; }
+   .db-l { display: block; }
+   .dib-l { display: inline-block; }
+   .dit-l { display: inline-table; }
+   .dt-l { display: table; }
+   .dtc-l { display: table-cell; }
+   .dt-row-l { display: table-row; }
+   .dt-row-group-l { display: table-row-group; }
+   .dt-column-l { display: table-column; }
+   .dt-column-group-l { display: table-column-group; }
+   .dt--fixed-l { table-layout: fixed; width: 100%; }
+  }
